@@ -4,12 +4,16 @@ import Head from "next/head";
 import Header from "@/components/header";
 import "./globals.css";
 import WhyUs from "@/components/WhyUs";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { isSignedIn } from "@clerk/nextjs";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation";
+
 import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
+  const router = useRouter();
+
   useEffect(() => {
     // This is a simple fade-in effect for the page content
     document.querySelectorAll(".fade-in").forEach((element) => {
@@ -18,21 +22,8 @@ export default function Home() {
     });
   }, []);
 
-  const router = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    // Check the authentication status here
-    const token = localStorage.getItem("authToken");
-    setIsLoggedIn(!!token);
-  }, []);
-
   const handleClick = () => {
-    if (isLoggedIn) {
-      router.push("/mood-assessment");
-    } else {
-      router.push("/login");
-    }
+      router.push("/MoodAssessment");
   };
 
   return (
