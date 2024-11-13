@@ -12,7 +12,7 @@ export default function Header() {
   const { isSignedIn } = useUser();
 
   return (
-    <header className="flex w-full justify-between items-center p-5 bg-gradient-to-r from-pink-200 to-pink-100 shadow-md rounded-b-3xl">
+    <header className="flex w-full justify-between items-center p-5 bg-gradient-to-r from-pink-200 to-pink-100 shadow-md rounded-b-3xl border border-b-white">
       <h1 className="text-3xl font-bold text-[#5e1a6b] font-dancing">
         HerVibe
       </h1>

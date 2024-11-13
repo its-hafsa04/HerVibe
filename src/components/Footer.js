@@ -4,7 +4,8 @@ import { FaInstagram, FaTwitter, FaFacebook, FaHeart } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-pink-100 to-pink-300 text-gray-800 py-6 px-4 sm:px-6">
+    <footer className="bg-gradient-to-b from-pink-100 to-pink-300 text-gray-800 py-6 px-4 sm:px-6 
+    border border-t-white">
       {/* Footer Content */}
       <div className="flex flex-col items-center text-center space-y-4">
         {/* Social Media Icons */}
