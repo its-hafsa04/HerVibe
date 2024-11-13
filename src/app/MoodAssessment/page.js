@@ -6,6 +6,7 @@ import { Slider } from "../../components/ui/slider";
 import { Button } from "../../components/ui/button";
 import { Label } from "../../components/ui/label";
 import Header from "@/components/header";
+import Footer from "@/components/Footer";
 
 export default function MoodAssessment() {
   const [loading, setLoading] = useState(false);
@@ -48,7 +49,7 @@ export default function MoodAssessment() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#ffebf0] to-[#f7cdf0] min-h-screen flex flex-col items-center">
+    <div className="bg-gradient-to-b from-[#ffebf0] to-[#f7cdf0] min-h-screen pb-[3%] flex flex-col items-center">
       <Header />
       <div className="w-[90%] md:w-[600px] mx-auto mt-8">
         <form

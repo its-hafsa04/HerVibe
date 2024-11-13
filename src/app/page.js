@@ -4,7 +4,8 @@ import Head from "next/head";
 import Header from "@/components/header";
 import "./globals.css";
 import WhyUs from "@/components/WhyUs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
@@ -16,6 +17,23 @@ export default function Home() {
       setTimeout(() => element.classList.add("opacity-100"), 200);
     });
   }, []);
+
+  const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Check the authentication status here
+    const token = localStorage.getItem("authToken");
+    setIsLoggedIn(!!token);
+  }, []);
+
+  const handleClick = () => {
+    if (isLoggedIn) {
+      router.push("/mood-assessment");
+    } else {
+      router.push("/login");
+    }
+  };
 
   return (
     <>
@@ -42,13 +60,16 @@ export default function Home() {
           </p>
         </div>
 
-        <button className="max-w-xs mx-auto bg-gradient-to-r from-[#fbc9d1] to-[#f7a8d3] rounded-full shadow-xl p-6 mt-10 hover:scale-105 transition transform duration-300 ease-out">
+        <button
+          onClick={handleClick}
+          className="max-w-xs mx-auto bg-gradient-to-r from-[#fbc9d1] to-[#f7a8d3] rounded-full shadow-xl p-6 mt-10 hover:scale-105 transition transform duration-300 ease-out"
+        >
           <h2 className="font-semibold text-lg text-[#5e1a6b]">Start Now </h2>
         </button>
       </main>
       <WhyUs />
       <div className="bg-gradient-to-b from-[#ffe5ec] to-[#ffd6e0] min-h-screen">
-      <ContactForm/>
+        <ContactForm />
       </div>
       <Footer />
     </>
