@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-4xl text-center mx-auto mt-[200px]">
+        <div className="max-w-4xl p-[10px] text-center mx-auto mt-[200px]">
           <h1 className="text-4xl font-dancing text-[#5e1a6b] mb-8 fade-in">
             Your Mental Wellness Companion
           </h1>
