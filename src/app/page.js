@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   const handleClick = () => {
-      router.push("/MoodAssessment");
+    router.push("/MoodAssessment");
   };
 
   return (
@@ -53,7 +53,7 @@ export default function Home() {
 
         <button
           onClick={handleClick}
-          className="max-w-xs mx-auto bg-gradient-to-r from-[#fbc9d1] to-[#f7a8d3] rounded-full shadow-xl p-6 mt-10 hover:scale-105 transition transform duration-300 ease-out"
+          className="max-w-xs mx-auto bg-gradient-to-r from-[#fbc9d1] to-[#f7a8d3] rounded-full shadow-lg p-6 mt-10 hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-in-out"
         >
           <h2 className="font-semibold text-lg text-[#5e1a6b]">Start Now </h2>
         </button>

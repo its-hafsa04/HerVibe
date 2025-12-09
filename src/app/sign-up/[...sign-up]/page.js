@@ -1,21 +1,18 @@
 "use client";
 import { SignUp } from "@clerk/nextjs";
-import { Box } from "@mui/material";
+import Header from "@/components/header";
+import Footer from "@/components/Footer";
 
 export default function SignUpPage() {
   return (
-    <Box>
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        mt={4}
-      >
-        <Box sx={{ width: "100%", maxWidth: "400px" }}>
+    <div className="min-h-screen bg-gradient-to-b from-[#ffe5ec] to-[#ffd6e0] flex flex-col">
+      <Header />
+      <div className="flex-1 flex items-center justify-center py-12 px-4">
+        <div className="w-full max-w-md">
           <SignUp />
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+      <Footer />
+    </div>
   );
 }

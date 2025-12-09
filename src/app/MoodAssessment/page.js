@@ -52,7 +52,7 @@ export default function MoodAssessment() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#ffebf0] to-[#f7cdf0] min-h-screen pb-[3%] flex flex-col items-center">
+    <div className="bg-gradient-to-b from-[#ffe5ec] to-[#ffd6e0] min-h-screen pb-[3%] flex flex-col items-center">
       <Header />
       <div className="w-[90%] md:w-[600px] mx-auto mt-8">
         <form
@@ -63,7 +63,7 @@ export default function MoodAssessment() {
             <div>
               <Label
                 htmlFor="mood"
-                className="text-lg font-semibold text-[#b05f83]"
+                className="text-lg font-semibold text-[#5e1a6b]"
               >
                 How are you feeling today?
               </Label>
@@ -76,7 +76,7 @@ export default function MoodAssessment() {
                 onValueChange={(value) => setValue("mood", value[0])}
                 className="mt-3"
               />
-              <div className="flex justify-between text-sm text-[#b05f83] mt-2">
+              <div className="flex justify-between text-sm text-[#5e1a6b] mt-2">
                 <span>Very Low 😢</span>
                 <span>Very High 😃</span>
               </div>
@@ -85,7 +85,7 @@ export default function MoodAssessment() {
             <div>
               <Label
                 htmlFor="energy"
-                className="text-lg font-semibold text-[#b05f83]"
+                className="text-lg font-semibold text-[#5e1a6b]"
               >
                 Energy Level
               </Label>
@@ -98,7 +98,7 @@ export default function MoodAssessment() {
                 onValueChange={(value) => setValue("energy", value[0])}
                 className="mt-3"
               />
-              <div className="flex justify-between text-sm text-[#b05f83] mt-2">
+              <div className="flex justify-between text-sm text-[#5e1a6b] mt-2">
                 <span>Low Energy 🙃</span>
                 <span>High Energy 😏</span>
               </div>
@@ -107,7 +107,7 @@ export default function MoodAssessment() {
 
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-[#f5a6c5] to-[#f8b6d0] text-white font-semibold rounded-full py-2 mt-4 shadow-md hover:from-[#f7b1c8] hover:to-[#f9c5dc] transition-all duration-300 ease-in-out"
+            className="w-full bg-gradient-to-r from-[#fbc9d1] to-[#f7a8d3] text-[#5e1a6b] font-semibold rounded-full py-3 mt-4 shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-in-out"
             disabled={loading}
           >
             {loading ? "Analyzing..." : "Get Personalized Activities"}
@@ -127,11 +127,11 @@ export default function MoodAssessment() {
                 key={index}
                 className="bg-white p-6 rounded-2xl shadow-lg border border-pink-100"
               >
-                <h3 className="text-xl text-[#b05f83] font-semibold mb-2">
+                <h3 className="text-xl text-[#5e1a6b] font-semibold mb-2">
                   {activity.title}
                 </h3>
-                <p className="text-[#7a4c61] mb-2">{activity.description}</p>
-                <p className="text-sm text-[#9e6d87]">
+                <p className="text-[#5e1a6b]/80 mb-2">{activity.description}</p>
+                <p className="text-sm text-[#5e1a6b]/70">
                   Duration: {activity.duration}
                 </p>
               </div>
