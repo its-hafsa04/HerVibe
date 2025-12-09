@@ -30,11 +30,14 @@ export default function MoodAssessment() {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+      
       if (!response.ok) {
-        throw new Error("Failed to get activities");
+        const errorMsg = result.error || result.details || "Failed to get activities";
+        console.error("API Error:", result);
+        throw new Error(errorMsg);
       }
 
-      const result = await response.json();
       if (result.error) {
         throw new Error(result.error);
       }

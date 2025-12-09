@@ -12,7 +12,7 @@ export async function POST(req) {
 
     const { mood, energy } = await req.json();
 
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `Based on a user's mood level of ${mood}/10 and energy level of ${energy}/10, 
     suggest 3 personalized activities specifically designed to uplift mental well-being, especially for females. Ensure these activities:
